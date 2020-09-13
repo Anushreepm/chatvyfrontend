@@ -23,7 +23,7 @@ const Forgot = ({ history }) => {
     event.preventDefault();
     setValues({ ...values, buttonText: "Submitting" });
     axios
-      .post("https://chatvubackend.herokuapp.com/auth/forgot-password", {
+      .post("https://chatvyfrontend.herokuapp.com/auth/forgot-password", {
         email,
       })
       .then((response) => {

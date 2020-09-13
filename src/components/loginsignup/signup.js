@@ -39,7 +39,7 @@ function Signup() {
         config
       );
 
-      setSuccess(res.data.success);
+      setSuccess(res.data.success); 
       setMessage(res.data.message);
       displayMessage();
     } catch (err) {
