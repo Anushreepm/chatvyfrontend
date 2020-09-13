@@ -7,7 +7,7 @@ import HomePage from "./components/HomePage/HomePage";
 import { BrowserRouter as Router, Route } from "react-router-dom";
 
 import login from "./components/loginsignup/login";
-import signup from "./components/loginsignup/signup1";
+import signup from "./components/loginsignup/signup";
 import activateAccount from "./components/loginsignup/activateAccount1";
 import forgot from "./components/loginsignup/Forgot";
 import ResetPassword from "../src/components/loginsignup/ResetPassword";

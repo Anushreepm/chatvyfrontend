@@ -22,7 +22,7 @@ function Login(props) {
       password: password,
     };
     checkLogin(obj);
-    
+
     setEmail("");
     setPassword("");
   };
@@ -36,7 +36,7 @@ function Login(props) {
       };
 
       const res = await axios.post(
-        "http://localhost:5000/auth/signin",
+        "https://chatvubackend.herokuapp.com/auth/signin",
         obj,
         config
       );
