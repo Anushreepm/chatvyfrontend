@@ -35,7 +35,11 @@ function Login(props) {
         },
       };
 
-      const res = await axios.post("/auth/signin", obj, config);
+      const res = await axios.post(
+        "https://chatvubackend.herokuapp.com/auth/signin",
+        obj,
+        config
+      );
       // console.log(res.data);
 
       setSuccess(res.data.success);
@@ -131,7 +135,10 @@ function Login(props) {
             />
           </div>
           <div className="forgot-password">
-            <a href="/auth/forgot-password" target="_blank">
+            <a
+              href="https://chatvubackend.herokuapp.com/auth/forgot-password"
+              target="_blank"
+            >
               forgot password ?
             </a>
           </div>

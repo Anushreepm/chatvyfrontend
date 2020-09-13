@@ -14,7 +14,9 @@ function ActivateAccount(props) {
           "Content-Type": "application/json",
         },
       };
-      const response = await axios.post(`/auth/activate/${token}`);
+      const response = await axios.post(
+        `https://chatvyfrontend.herokuapp.com/auth/activate/${token}`
+      );
       setSuccess(response.data.success);
       setMessage(response.data.message);
     } catch (err) {
