@@ -15,8 +15,8 @@ function ActivateAccount(props) {
         },
       };
       const response = await axios.post(
-        `/auth/activate/${token}`
-      )
+        `https://chatvubackend.herokuapp.com/auth/activate/${token}`
+      );
       setSuccess(response.data.success);
       setMessage(response.data.message);
     } catch (err) {
@@ -46,7 +46,7 @@ function ActivateAccount(props) {
       </>
     );
   };
-  
+
   return (
     <div className="activate-account-main">
       <div className={`activate-account ${success}`}>

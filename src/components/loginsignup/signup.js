@@ -33,13 +33,16 @@ function Signup() {
         },
       };
 
-      const res = await axios.post("/auth/signup", obj, config);
-     
-      setSuccess(res.data.success);
+      const res = await axios.post(
+        "https://chatvubackend.herokuapp.com/auth/signup",
+        obj,
+        config
+      );
+
+      setSuccess(res.data.success); 
       setMessage(res.data.message);
       displayMessage();
     } catch (err) {
-   
       setSuccess(err.response.data.success);
       setMessage(err.response.data.message);
       displayMessage();

@@ -136,7 +136,7 @@ function Login(props) {
           </div>
           <div className="forgot-password">
             <a
-              href="http://localhost:3000/auth/forgot-password"
+              href="https://chatvubackend.herokuapp.com/auth/forgot-password"
               target="_blank"
             >
               forgot password ?

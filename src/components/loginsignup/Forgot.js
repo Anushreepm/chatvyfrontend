@@ -23,14 +23,14 @@ const Forgot = ({ history }) => {
     event.preventDefault();
     setValues({ ...values, buttonText: "Submitting" });
     axios
-      .post("/auth/forgot-password", { email })
+      .post("https://chatvyfrontend.herokuapp.com/auth/forgot-password", {
+        email,
+      })
       .then((response) => {
-       
         toast.success(response.data.message);
         setValues({ ...values, buttonText: BTN_LABEL });
       })
       .catch((error) => {
-       
         toast.error(error.response.data.error);
         setValues({ ...values, buttonText: BTN_LABEL });
       });
@@ -41,7 +41,7 @@ const Forgot = ({ history }) => {
       <div className="form-group">
         <label className="text-muted">Email</label>
         <input
-        r
+          r
           onChange={handleChange("email")}
           value={email}
           type="email"

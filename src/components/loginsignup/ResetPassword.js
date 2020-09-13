@@ -33,7 +33,10 @@ const Reset = ({ match }) => {
     event.preventDefault();
     setValues({ ...values, buttonText: "Submitting" });
     axios
-      .post("/auth/reset-password", { newPassword, resetPasswordLink: token })
+      .post("https://chatvubackend.herokuapp.com/auth/reset-password", {
+        newPassword,
+        resetPasswordLink: token,
+      })
       .then((response) => {
         toast.success(response.data.message);
         setValues({ ...values, buttonText: "Done" });
